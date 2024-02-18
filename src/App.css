@@ -1,0 +1,130 @@
+/* Reset any default margin and padding for the body element */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Style the navigation bar */
+nav {
+  background: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Style the navigation links */
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  padding: 0; /* Remove padding to align the links better */
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Style for each section */
+section {
+  min-height: 100vh; /* Set a minimum height to ensure the sections fill the viewport */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Style the footer */
+footer {
+  background: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+.container {
+  background-color: #f4f4f4;
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin: 20px;
+  width: 300px;
+}
+
+/* Style for the button */
+button {
+  display: inline-block;
+  background-color: #0074d9;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Additional styles for button on hover or focus */
+button:hover, button:focus {
+  background-color: #0056b3;
+}
+/* 
+
+.container {
+  background-color: #f4f4f4;
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin: 20px;
+  width: 300px;
+} */
+
+/* In your CSS file, add a style for the button */
+button {
+  display: inline-block; /* Ensure the button is displayed as a block element */
+  background-color: #0074d9; /* Background color for the button */
+  color: #fff; /* Text color */
+  padding: 10px 20px; /* Padding around the button content */
+  border: none; /* Remove the button border */
+  border-radius: 5px; /* Rounded corners for the button */
+  cursor: pointer; /* Change the cursor on hover to indicate it's clickable */
+}
+
+/* Additional styles for button on hover or focus */
+button:hover, button:focus {
+  background-color: #0056b3; /* Change the background color on hover or focus */
+}
+
+/* nav {
+  background-color: #f1f1f1;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+li {
+  margin-right: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+  padding: 5px;
+}
+
+a:hover {
+  background-color: #ccc;
+} */
+/* Add this to your CSS file or use styled-components */
+
+.dashboard-box {
+  background-color: #cc0b0b;
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-info {
+  margin-top: 16px;
+}

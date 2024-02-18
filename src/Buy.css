@@ -1,0 +1,44 @@
+/* Buy.css */
+
+/* Styles for the outer container */
+.container {
+    max-width: 500px; /* Adjust the width as needed */
+    margin: 0; /* Center the container horizontally */
+    padding: 60px;
+    border: 2px solid #faf8f8; /* Add a border with bold lines */
+    display: flex;
+    justify-content: center; /* Center the inner content horizontally */
+    align-items: center; /* Center the inner content vertically */
+    flex-direction: column; /* Align the inner content in a column */
+  }
+  
+  /* Styles for the table */
+  table {
+    width: 80%;
+    border-collapse: collapse; /* Remove spacing between table cells */
+    margin: 0; /* Add this to move the table to the left */
+  }
+  
+  table th, table td {
+    padding: 2px;
+    border: 5px solid #000; /* Add borders to table cells */
+    text-align: left; /* Align text to the left within cells */
+  }
+  
+  table th {
+    font-weight: bold; /* Make table headers bold */
+  }
+  
+  /* Styles for the button */
+  button {
+    background-color: #0074cc;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold; /* Make the button text bold */
+  }
+  
+  /* You can add more styles as needed */
+  
+  
