@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bitcoin Payment</title>
+</head>
+<body>
+    <h1>Send Bitcoin Payment</h1>
+    <p>Please send your payment to the following Bitcoin address:</p>
+    <p id="bitcoin-address">1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa</p>
+    <button id="copy-button">Copy Address</button>
+
+    <!-- Link to the wallet page -->
+    <a href="/wallet.js">Go to Wallet Page</a>
+
+
+    <script>
+        document.getElementById('copy-button').addEventListener('click', function() {
+            // Get the Bitcoin address element
+            var bitcoinAddressElement = document.getElementById('bitcoin-address');
+            // Create a range object
+            var range = document.createRange();
+            // Select the text within the Bitcoin address element
+            range.selectNode(bitcoinAddressElement);
+            // Add the range to the user's clipboard
+            window.getSelection().addRange(range);
+            // Copy the selected text to the clipboard
+            document.execCommand('copy');
+            // Deselect the text
+            window.getSelection().removeAllRanges();
+            // Inform the user that the address has been copied
+            alert('Bitcoin address copied to clipboard!');
+
+            //the function for displaying the cookie
+            function displayAddress() {
+      // Get the paragraph element where the address will be displayed
+      var bitcoinAddressElement = document.getElementById('bitcoinAddress');
+      
+      // Update the text content of the paragraph to display the address
+      bitcoinAddressElement.textContent = 'Bitcoin Address: 1ABCDEF123456789';
+      
+      // Show a message to remind the user to carry out the transaction on their own account
+      alert('Please use your own Bitcoin wallet to send the payment.');
+    }
+        });
+    </script>
+</body>
+</html>
