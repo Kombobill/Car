@@ -12,7 +12,7 @@ import Dashboard from './Dashboard.js';
 import ErrorBoundary from './components/ErrorBoundary.js';
 import index from './index.js';
 import AuthenticatedRoutes from './AuthenticatedRoutes';
-import axios from 'axios';
+import axios, { Axios } from 'axios';
 
 // import './Styles.css';
 // import ContactForm from './ContactForm';
@@ -28,6 +28,19 @@ import axios from 'axios';
 //   );
 // }
 const App = () => {
+
+// connecting front end and back end using axios 
+const [data,setData]=useState();
+
+const getData=async()=>{
+  const response=await Axios.get("http://localhost:3000/getData");
+  setData(response.data);
+}
+useEffect(()=>{
+  getData()
+
+},[]);
+
   const [jwt, setJwt] = useState(null);
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [dashboardData, setDashboardData] = useState({
