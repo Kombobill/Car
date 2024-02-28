@@ -36,9 +36,24 @@ db.connect((err) => {
 });
 
 // Middleware
+app.get("/getData",(req,res)=>{
+  res.send("Hello");
+});
 app.use(cors());
 app.use(bodyParser.json());
 // app.use('/api', routes);
+app.post('/api/products', (req, res) => {
+  // Extract data from the request body
+  const { name, category, price, description } = req.body;
+
+  // For now, let's just log the received data
+  console.log('Received product data:', { name, category, price, description });
+
+  // Send a success response
+  res.status(201).json({ message: 'Product data received successfully' });
+});
+
+
 
 // Example error handling middleware
 app.use((err, req, res, next) => {

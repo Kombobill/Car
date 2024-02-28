@@ -4,9 +4,9 @@ const mysql = require('mysql');
 const pool = mysql.createPool({
   connectionLimit : 10,
   host            : 'localhost',
-  user            : 'your_mysql_username',
-  password        : 'your_mysql_password',
-  database        : 'your_database_name'
+  user            : 'root',
+  password        : 'Kombogates25',
+  database        : 'mysql'
 });
 
 // Define the User model
