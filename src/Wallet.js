@@ -1,5 +1,4 @@
-// WalletPage.js
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react';
 
 const WalletPage = () => {
   const [message, setMessage] = useState('');
@@ -25,7 +24,7 @@ const WalletPage = () => {
           Notification.requestPermission().then((permission) => {
             if (permission === 'granted') {
               new Notification('Bitcoin Address Copied', {
-                body: 'Bitcoin address copied to clipboard!',
+                body: '',
               });
             }
           });
@@ -53,30 +52,32 @@ const WalletPage = () => {
       <button id="copy-button" onClick={handleCopyAddress}>Copy Address</button>
       <div>
         {/* Display the message in the container box */}
-        {message && (
+        {!submitted && message && (
           <div style={{ border: '1px solid black', padding: '10px', marginTop: '20px' }}>
             <p>{message}</p>
           </div>
         )}
       </div>
-      {!submitted ? (
-        <form onSubmit={handleSubmit}>
-          <label>
-            Message:
-            <input
-              type="text"
-              value={message}
-              onChange={(e) => setMessage(e.target.value)}
-            />
-          </label>
-          <button type="submit">Submit</button>
-        </form>
-      ) : (
-        <div>
-          <p>Thank you for your payment confirmation!</p>
-          <p>Message: {message}</p>
-        </div>
-      )}
+      <div>
+        {!submitted ? (
+          <form onSubmit={handleSubmit}>
+            <label>
+              Message:
+              <input
+                type="text"
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
+              />
+            </label>
+            <button type="submit">Submit</button>
+          </form>
+        ) : (
+          <div>
+            <p>Thank you for your payment confirmation!</p>
+            <p>Message: {message}</p>
+          </div>
+        )}
+      </div>
     </div>
   );
 };

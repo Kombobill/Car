@@ -6,8 +6,8 @@ body {
 
 /* Style the navigation bar */
 nav {
-  background: #333;
-  color: #fff;
+  background: #d87070;
+  color: #e20bb4;
   padding: 10px;
   text-align: center;
 }
@@ -35,7 +35,7 @@ section {
 
 /* Style the footer */
 footer {
-  background: #333;
+  background: #86cf99;
   color: #fff;
   padding: 10px;
   text-align: center;
